@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "covid-ang"
+    }
+  },
+  "defaultProject": "covid-ang",
+  "cli": {
+    "analytics": false
+  }
 }
