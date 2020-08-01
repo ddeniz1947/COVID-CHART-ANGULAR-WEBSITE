@@ -1,4 +1,7 @@
 # CovidAng
+Angular COVID-19 Website. Covid global data , everyday up to date with angular charts.
+
+Project Live Link : https://covid-ang.herokuapp.com/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
