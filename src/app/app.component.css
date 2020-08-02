@@ -1,0 +1,27 @@
+.scrollbarCard{
+    overflow-y: scroll; 
+    height: 500px; 
+   }
+  
+  .scrollbarCard::-webkit-scrollbar-thumb {
+    background: #117A8B !important; 
+    border-radius: 5px !important;
+  }
+  
+  .scrollbarCard::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .scrollbarCard::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+  .scrollbarCard::-webkit-scrollbar-thumb {
+    background: #117A8B; 
+    border-radius: 5px;
+  }
+  
+  .scrollbarCard::-webkit-scrollbar-thumb:hover {
+    background: #117A8B; 
+  }
