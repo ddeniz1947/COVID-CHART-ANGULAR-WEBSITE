@@ -1,4 +1,14 @@
-# CovidAng
+# Covid-19 Angular Chart Website
+
+LIVE LINK : https://covid-ang.herokuapp.com/
+
+WEBSITE INFORMATION :
+
+first chart => select country and display data 
+
+second chart => global covid data chart
+
+third chart  => Turkey covid data chart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
