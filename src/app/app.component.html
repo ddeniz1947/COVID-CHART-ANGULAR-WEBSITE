@@ -1,123 +1,94 @@
-<div class="container">
-  <div class="row" style="display: flex; justify-content: center;">
-    <h6 class="display-4">DENİZ CAN DİNÇ - COVID-19 CHART WEBSITE</h6>
+
+
+  <div class="rowClass">
+    <span class="fontClass" >DENİZ CAN DİNÇ - COVID-19 CHART WEBSITE</span>
   </div>
 
   <hr />
-  <div class="row">
-   
 
-     
-   
-
+  <div class="rowClass">
 
   </div>
 
-  <h2 class="display-4">COVID-19 {{ country }} DATA    
-       <div class="dropdown">
-    <button
-      class="btn btn-info dropdown-toggle"
-      type="button"
-      id="dropdownMenuButton"
-      data-toggle="dropdown"
-      aria-haspopup="true"
-      aria-expanded="false"
-    >
-      SELECT COUNTRY
-    </button>
-    <div
-      class="dropdown-menu scrollbarCard"
-      aria-labelledby="dropdownMenuButton"
-    >
-      <a
-        class="dropdown-item"
-        href="#"
-        *ngFor="let item of saleData3"
-        (click)="countryFunc(item.Slug, item.Country)"
-        >{{ item.Slug }}</a
-      >
+  <h2 class="fontClass">COVID-19 {{ country }} DATA
+
+    <div class="dropdown">
+      <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        SELECT COUNTRY
+      </button>
+      <div class="dropdown-menu scrollbarCard" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" *ngFor="let item of saleData3"
+          (click)="countryFunc(item.Slug, item.Country)">{{ item.Slug }}</a>
+      </div>
     </div>
-  </div></h2>
+
+  </h2>
+
   <hr />
   <br />
-  <div class="row">
-    <div class="col-md-10">
-      <ngx-charts-bar-vertical
-        [view]="[1000, 400]"
-        [results]="saleData4"
-        [xAxisLabel]="'COVİD-19'"
-        [legendTitle]="'COVID-19 GLOBAL'"
-        [yAxisLabel]="'Vaka Sayıları'"
-        [legend]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [xAxis]="true"
-        [yAxis]="true"
-        [gradient]="true"
-      >
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 justify-content-center">
+        <h2 *ngIf="errorProviderBool == true">{{errorProvider}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="rowClass">
+
+      <ngx-charts-bar-vertical [view]="view" (window:resize)="onResize($event)" [results]="saleData4" [xAxisLabel]="'COVİD-19'"
+       [yAxisLabel]="'Vaka Sayıları'" [legend]="false" [showXAxisLabel]="true"
+        [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
       </ngx-charts-bar-vertical>
-    </div>
   </div>
+
   <br />
   <hr />
-  <h2 class="display-4">COVID-19 GLOBAL VERİLER</h2>
+
+  <h2 class="fontClass">COVID-19 GLOBAL VERİLER</h2>
+
   <hr />
   <br />
-  <div class="row">
-    <div class="col-md-10">
-      <ngx-charts-bar-vertical
-        [view]="[1000, 400]"
-        [results]="saleData"
-        [xAxisLabel]="'COVİD-19'"
-        [legendTitle]="'COVID-19 GLOBAL'"
-        [yAxisLabel]="'Vaka Sayıları'"
-        [legend]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [xAxis]="true"
-        [yAxis]="true"
-        [gradient]="true"
-      >
+
+  <div class="rowClass">
+      <ngx-charts-bar-vertical [view]="view" (window:resize)="onResize($event)" [results]="saleData" [xAxisLabel]="'COVİD-19'"
+        [yAxisLabel]="'Vaka Sayıları'" [legend]="false" [showXAxisLabel]="true"
+        [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
       </ngx-charts-bar-vertical>
-    </div>
   </div>
+
   <hr />
-  <h2 class="display-4">COVID-19 TÜRKİYE VERİLERİ</h2>
+  <h2 class="fontClass">COVID-19 TÜRKİYE VERİLERİ</h2>
   <hr />
   <br />
-  <div class="row">
-    <div class="col-md-10">
-      <ngx-charts-bar-vertical
-        [view]="[1000, 400]"
-        [results]="saleData2"
-        [xAxisLabel]="'COVİD-19123'"
-        [legendTitle]="'COVID-19 GLOBAL1231'"
-        [yAxisLabel]="'Vaka Sayıları'"
-        [legend]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [xAxis]="true"
-        [yAxis]="true"
-        [gradient]="true"
-      >
+
+  <div class="rowClass">
+      <ngx-charts-bar-vertical [view]="view" (window:resize)="onResize($event)" [results]="saleData2" [xAxisLabel]="'COVİD-19123'"
+        [legendTitle]="'COVID-19 TURKEY'" [yAxisLabel]="'Vaka Sayıları'" [legend]="false" [showXAxisLabel]="true"
+        [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
       </ngx-charts-bar-vertical>
-    </div>
   </div>
+
   <hr />
-  <div class="row">
-    <div class="col-md-10">
+
+  <div class="container">
+    <div class="row">
       <ngx-charts-advanced-pie-chart [results]="saleData" [gradient]="true">
       </ngx-charts-advanced-pie-chart>
     </div>
   </div>
-</div>
-<br><hr>
+
+
+
+<br>
+<hr>
 <div class="container" style="display: flex; justify-content: center; font-size: 100px;">
-    <a target="blank" href="https://github.com/ddeniz1947" style="margin-right: 5px;">
-        <i class="fab fa-github"></i>
-    </a>
-   <a target="blank" href="https://ddeniz1947.github.io/" style="margin-right: 5px;">
+  <a target="blank" href="https://github.com/ddeniz1947" style="margin-right: 5px;">
+    <i class="fab fa-github"></i>
+  </a>
+  <a target="blank" href="https://ddeniz1947.github.io/" style="margin-right: 5px;">
     <i class="fas fa-user"></i>
-   </a>
+  </a>
 </div>
 <br /><br /><br /><br /><br />
